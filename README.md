@@ -22,7 +22,7 @@ The base class for this UCWA REST client is LyncClient. Lync server authenticati
 <li>UCWA REST API request are sent via Apache HttpClient API version 4.2.1. PoolingClientConnectionManager of this api is used to manage http connections. </li>
 <li>LyncGatewayServlet is used as a proxy to send lync presence/contact note/instant message etc. requests. All the responses are in JSON format.</li></ol></p>
 <p>
-<b>Example usage:</b>
+<b>Example usage:</b><br/>
 <b>url:</b> http://somePcIp/someProject/lyncGateway?sipForPresence=john.doe@somecompany.com.tr<br/>
 <b>json response:</b> {"ResponseCode":"200","Sip":"sipForPresence=john.doe@somecompany.com.tr","Presence":"Online"}
 <br/>
