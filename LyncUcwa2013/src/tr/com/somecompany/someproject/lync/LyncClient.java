@@ -403,7 +403,7 @@ public final class LyncClient {
 			// code
 			nvps.add(new BasicNameValuePair("password", decrypt("some_encrypted_pass_here")));
 			httpPost.setEntity(new UrlEncodedFormEntity(nvps));
-
+ 
 			setRequestData(httpOpWrapper, httpPost);
 
 			System.out.println("\nREQUEST 3:" + httpPost.getURI());
