@@ -398,7 +398,7 @@ public final class LyncClient {
 
 			List<NameValuePair> nvps = new ArrayList<NameValuePair>();
 			nvps.add(new BasicNameValuePair("grant_type", "password"));
-			nvps.add(new BasicNameValuePair("username", "SomeDomain\\P19810"));
+			nvps.add(new BasicNameValuePair("username", "some_domain\\some_active_directory_account_name"));
 			// enrcypt method of this class is used to avoid plain password in
 			// code
 			nvps.add(new BasicNameValuePair("password", decrypt("some_encrypted_pass_here")));
