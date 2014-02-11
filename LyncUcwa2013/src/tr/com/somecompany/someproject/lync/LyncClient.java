@@ -395,7 +395,7 @@ public final class LyncClient {
 			httpPost.setHeader(HttpHeaders.CONNECTION, "keep-alive");
 			httpPost.setHeader(HttpHeaders.HOST, LYNC_EXT_POOL_HOST);
 			httpPost.setHeader(X_MS_ORIGIN_HEADER_KEY, X_MS_ORIGIN_HEADER_VALUE);
-
+ 
 			List<NameValuePair> nvps = new ArrayList<NameValuePair>();
 			nvps.add(new BasicNameValuePair("grant_type", "password"));
 			nvps.add(new BasicNameValuePair("username", "some_domain\\some_active_directory_account_name"));
