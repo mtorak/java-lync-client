@@ -23,11 +23,11 @@ The base class for this UCWA REST client is LyncClient. Lync server authenticati
 <li>`LyncGatewayServlet` is used as a proxy to send lync presence/contact note/instant message etc. requests. All the responses are in JSON format.</li></ol></p>
 
   
-### Example usage:
-* <b>Url:</b> `http://somePcIp/someProject/lyncGateway?sipForPresence=john.doe@somecompany.com.tr`
-* <b>Json response:</b> `{"ResponseCode":"200","Sip":"sipForPresence=john.doe@somecompany.com.tr","Presence":"Online"}`
+##### Example usage:
+* <b>Url:</b> `http://somePcIp/someProject/lyncGateway?sipForPresence=john.doe@somecompany.com.tr`<br>
+  <b>Json response:</b> `{"ResponseCode":"200","Sip":"sipForPresence=john.doe@somecompany.com.tr","Presence":"Online"}`
   <br>
 * <b>Url:</b> `http://somePcIp/someProject/lyncGateway?sipForContactNote=john.doe@somecompany.com.tr<br/>`
-* <b>Json response:</b> `{"ContactNote":"test","ResponseCode":"200","Sip":"john.doe@somecompany.com.tr"}`
+  <b>Json response:</b> `{"ContactNote":"test","ResponseCode":"200","Sip":"john.doe@somecompany.com.tr"}`
 
 
