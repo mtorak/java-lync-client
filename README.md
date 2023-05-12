@@ -21,14 +21,13 @@ The base class for this UCWA REST client is LyncClient. Lync server authenticati
 <li>If the authentication token is timed out, then Lync 2013 server responds with an HTTP Error 401 Unauthorized response. In this case `authenticate()` is called and old token is replaced with the new one. Authentication requests are sent by only one thread, because all the lync operations are done with a single token. So this parts of code are thread safe. (To enable multi-user support: for each sip there should be a different token in the `authenticationMap`, edit this parts if you need a multi-user java client for lync 2013 ucwa api. But in our case we only needed to get presence and contact note of users via a single lync account.)</li>
 <li>UCWA REST API requests are sent via Apache HttpClient API version 4.2.1. `PoolingClientConnectionManager` of this api is used to manage http connections. </li>
 <li>`LyncGatewayServlet` is used as a proxy to send lync presence/contact note/instant message etc. requests. All the responses are in JSON format.</li></ol></p>
-<p>
-## Example usage:
+
+  
+### Example usage:
 * <b>Url:</b> `http://somePcIp/someProject/lyncGateway?sipForPresence=john.doe@somecompany.com.tr`
 * <b>Json response:</b> `{"ResponseCode":"200","Sip":"sipForPresence=john.doe@somecompany.com.tr","Presence":"Online"}`
-
   <br>
-  
 * <b>Url:</b> `http://somePcIp/someProject/lyncGateway?sipForContactNote=john.doe@somecompany.com.tr<br/>`
 * <b>Json response:</b> `{"ContactNote":"test","ResponseCode":"200","Sip":"john.doe@somecompany.com.tr"}`
-</p>
+
 
