@@ -1,0 +1,7 @@
+target/
+.idea/
+logs/
+*.iml
+uploaded-files/
+lib/
+**/*.log
