@@ -28,9 +28,9 @@ and the token sent from lync server is used for all subsequent requests. `LyncCl
  All the responses are in JSON format.</ol></p>
   
 ##### Example usage:
-* **Url:** `http://somePcIp/someProject/lyncGateway?sipForPresence=john.doe@somecompany.com.tr`
-  * **Json response:** `{"ResponseCode":"200","Sip":"sipForPresence=john.doe@somecompany.com.tr","Presence":"Online"}`
-* **Url:** `http://somePcIp/someProject/lyncGateway?sipForContactNote=john.doe@somecompany.com.tr`
-  * **Json response:** `{"ContactNote":"test","ResponseCode":"200","Sip":"john.doe@somecompany.com.tr"}`
+* **Request:** `http://somePcIp/someProject/lyncGateway?sipForPresence=john.doe@somecompany.com.tr`
+  * **Response:** `{"ResponseCode":"200","Sip":"sipForPresence=john.doe@somecompany.com.tr","Presence":"Online"}`
+* **Request:** `http://somePcIp/someProject/lyncGateway?sipForContactNote=john.doe@somecompany.com.tr`
+  * **Response:** `{"ContactNote":"test","ResponseCode":"200","Sip":"john.doe@somecompany.com.tr"}`
 
 
