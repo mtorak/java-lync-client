@@ -12,7 +12,7 @@ The base class for this UCWA REST client is LyncClient. Lync server authenticati
 and the token sent from lync server is used for all subsequent requests. `LyncClient` holds an authenticationMap to stores the token. 
 `LyncGatewayServlet` holds an instance of `LyncClient` and passes presence/contact note/instant message requests to this client.
 
-#### Here is the basic execution logic:
+### Here is the basic execution logic:
 1. `LyncClient.authenticationMap` is peeked when a request came, if there is a token there then it is used as Authorization header for the http request 
  which is sent to Lync Server 2013. If not then `LyncClient.authenticate()` method is called which makes authentication requests 
  and puts the provided token to the authenticationMap. This token has an 8 hour of validity.(it may be a configurable value on the server)
@@ -26,8 +26,8 @@ and the token sent from lync server is used for all subsequent requests. `LyncCl
  http connections. 
 4. `LyncGatewayServlet` is used as a proxy to send lync presence/contact note/instant message etc. requests. 
  All the responses are in JSON format.</ol></p>
-  
-##### Example usage:
+
+### Example usage:
 * **Request:** `http://somePcIp/someProject/lyncGateway?sipForPresence=john.doe@somecompany.com.tr`
   * **Response:** `{"ResponseCode":"200","Sip":"sipForPresence=john.doe@somecompany.com.tr","Presence":"Online"}`
 * **Request:** `http://somePcIp/someProject/lyncGateway?sipForContactNote=john.doe@somecompany.com.tr`
